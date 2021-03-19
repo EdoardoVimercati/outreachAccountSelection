@@ -2,6 +2,9 @@ function generateString(){
     let excelData = document.getElementById("excelData").value;
     let arrayExcelData = excelData.split("\n");
     console.log(arrayExcelData[arrayExcelData.length-1]);
+    if(arrayExcelData.length > 100){
+        alert("Don't exceed 100 records!");
+    }
     for(let i=0; arrayExcelData[arrayExcelData.length-1]==""; i++){
         arrayExcelData.pop();
         console.log("risultato dopo pop" + arrayExcelData);
