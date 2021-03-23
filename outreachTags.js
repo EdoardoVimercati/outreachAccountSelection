@@ -1,3 +1,9 @@
+var choice;
+
+function choose(x){
+    choice = x;
+}
+
 function generateString(){
     let excelData = document.getElementById("excelData").value;
     let arrayExcelData = excelData.split("\n");
@@ -11,11 +17,21 @@ function generateString(){
     }
 
     console.log(arrayExcelData);
-    draftOutputString = arrayExcelData.join('" OR custom_id:"')
-    console.log(draftOutputString);
-    finalOutputString = 'custom_id:"' + draftOutputString + '"';
-    console.log(finalOutputString);
-    document.getElementById("myInput").value = finalOutputString;
+    if( choice == "PEID"){
+        draftOutputString = arrayExcelData.join('" OR custom_id:"')
+        console.log(draftOutputString);
+        finalOutputString = 'custom_id:"' + draftOutputString + '"';
+        console.log(finalOutputString);
+        document.getElementById("myInput").value = finalOutputString;
+    } else if (choice == "prospectMail") {
+        draftOutputString = arrayExcelData.join('" OR email:"')
+        console.log(draftOutputString);
+        finalOutputString = 'email:"' + draftOutputString + '"';
+        console.log(finalOutputString);
+        document.getElementById("myInput").value = finalOutputString;
+
+    }
+    
     
 }
 
