@@ -4,6 +4,27 @@ function choose(x){
     choice = x;
 }
 
+ console.log(document.getElementById("testExample"));
+
+
+document.getElementById("b1").addEventListener("click",function(){
+    if(document.getElementById("b2").classList.contains("tipoSelezionato")){
+        document.getElementById("b2").classList.toggle('tipoSelezionato');
+    }
+    document.getElementById("b1").classList.toggle('tipoSelezionato');
+    
+    
+})
+
+document.getElementById("b2").addEventListener("click",function(){
+    if(document.getElementById("b1").classList.contains("tipoSelezionato")){
+        document.getElementById("b1").classList.toggle('tipoSelezionato');
+        console.log(document.getElementById("b1"));
+    }
+    document.getElementById("b2").classList.toggle('tipoSelezionato');
+    
+})
+
 function generateString(){
     let excelData = document.getElementById("excelData").value;
     let arrayExcelData = excelData.split("\n");
