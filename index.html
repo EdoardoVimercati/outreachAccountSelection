@@ -3,11 +3,15 @@
     <head>
         <script src="outreachTags.js"></script>
         <title>
-            Outreach Account Selection
+            String generator for Outreach
         </title>
     </head>
     <body>
-        <h1>Outreach Account Selection</h1>
+        <h1>String generator for Outreach - multiple item selection</h1>
+        <p>What do you want to search?</p>
+        <input type="button" onclick="choose('PEID')" value="PE ID"/>
+        <input type="button" onclick="choose('prospectMail')" value="Prospect Mail"/>
+        <hr size="1" width="100%" color="black">
         <p>Paste the excel column here</p>
         <textarea id="excelData" style="width:250px;height:150px;"></textarea>
         <br>
